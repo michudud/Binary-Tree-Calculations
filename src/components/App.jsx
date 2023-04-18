@@ -15,14 +15,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <LeafCounter dataStructure={currDataStructure} />
-      <EdgeCounter dataStructure={currDataStructure} />
-      <EquivalentChecker dataStructure={currDataStructure} />
-      <button onClick={handleClick}>Check Structure</button>
-      <textarea
-        ref={textAreaRef}
-        defaultValue={JSON.stringify(currDataStructure)}
-      ></textarea>
+      <div className="App_Content">
+        <LeafCounter dataStructure={currDataStructure} />
+        <EdgeCounter dataStructure={currDataStructure} />
+        <EquivalentChecker dataStructure={currDataStructure} />
+        <button className="App_Button" onClick={handleClick}>
+          Check the Structure Below
+        </button>
+        <textarea
+          className="App_Textarea"
+          ref={textAreaRef}
+          defaultValue={JSON.stringify(currDataStructure)}
+        ></textarea>
+      </div>
     </div>
   );
 };
