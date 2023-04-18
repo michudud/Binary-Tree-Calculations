@@ -1,5 +1,4 @@
-const EdgeCounter = ({dataStructure}) => {
-
+const EdgeCounter = ({ dataStructure }) => {
   const calculateEdges = (structure) => {
     let edges = [];
     const checkNode = (node, edgeCounter) => {
@@ -15,9 +14,11 @@ const EdgeCounter = ({dataStructure}) => {
     return Math.max(...edges);
   };
 
+  const edgeNumber = calculateEdges(dataStructure);
+
   return (
     <div className="EdgeCounter">
-      {`Largest number of edges: ${calculateEdges(dataStructure)}`}
+      {`Largest number of edges: ${edgeNumber}`}
     </div>
   );
 };

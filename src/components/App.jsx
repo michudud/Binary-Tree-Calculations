@@ -8,9 +8,9 @@ import { exampleStructure } from "./data_structures/example_structure";
 const App = () => {
   return (
     <div className="App">
-      <LeafCounter structure={exampleStructure}/>
-      <EdgeCounter structure={exampleStructure}/>
-      <EquivalentChecker structure={exampleStructure}/>
+      <LeafCounter dataStructure={exampleStructure} />
+      <EdgeCounter dataStructure={exampleStructure} />
+      <EquivalentChecker dataStructure={exampleStructure} />
     </div>
   );
 };

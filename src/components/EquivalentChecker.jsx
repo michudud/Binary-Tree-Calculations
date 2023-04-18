@@ -1,9 +1,8 @@
-const EquivalentChecker = ({dataStructure}) => {
-
+const EquivalentChecker = ({ dataStructure }) => {
   const compareInstances = (structure) => {
     let leftSide, rightSide;
     let equivalent = true;
-  
+
     const compareNodes = (node1, node2) => {
       if (node1.value === node2.value) {
         if (node1.children && node2.children) {
@@ -11,7 +10,10 @@ const EquivalentChecker = ({dataStructure}) => {
             if (node1.children[0].value === node2.children[0].value) {
               compareNodes(node1.children[0], node2.children[0]);
             }
-          } else if (node1.children.length === 2 && node2.children.length === 2) {
+          } else if (
+            node1.children.length === 2 &&
+            node2.children.length === 2
+          ) {
             if (
               node1.children[0].value === node2.children[0].value &&
               node1.children[1].value === node2.children[1].value
@@ -41,7 +43,7 @@ const EquivalentChecker = ({dataStructure}) => {
         equivalent = false;
       }
     };
-  
+
     if (structure[0].children) {
       if (structure[0].children.length === 2) {
         leftSide = structure[0].children[0];
@@ -52,17 +54,19 @@ const EquivalentChecker = ({dataStructure}) => {
     } else {
       equivalent = "only one node-root";
     }
-  
+
     if (equivalent === true) {
       compareNodes(leftSide, rightSide);
     }
-  
+
     return equivalent;
   };
 
+  const isEquivalent = compareInstances(dataStructure);
+
   return (
     <div className="EquivalentChecker">
-      {`Instances are equivalent: ${compareInstances(dataStructure)}`}
+      {`Instances are equivalent: ${isEquivalent}`}
     </div>
   );
 };
