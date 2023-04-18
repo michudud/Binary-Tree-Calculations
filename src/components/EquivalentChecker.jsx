@@ -4,7 +4,6 @@ const EquivalentChecker = ({ dataStructure }) => {
     let equivalent = true;
 
     const compareNodes = (node1, node2) => {
-      console.log(node1, node2);
       if (node1.value === node2.value) {
         if (node1.children && node2.children) {
           if (node1.children.length === 1 && node2.children.length === 1) {
