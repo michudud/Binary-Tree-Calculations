@@ -25,10 +25,19 @@
   padding: 10px;
   border-radius: 10px;
   border: none;
-  background-color: #778899;
+  background-color: #708090;
   color: white;
   font-size: 16px;
   font-weight: 600;
+}
+
+.App_Button:hover {
+  background-color: #778899;
+}
+
+.App_Button:active {
+  color: #696969;
+  background-color: #f5fffa;
 }
 
 .App_Textarea {
