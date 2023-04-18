@@ -6,12 +6,6 @@ Available calculations:
 - largest number of edges
 - comparasion of two sides of a tree
 
-Run instructions:
-
-- instal - npm i
-- start - npm start
-- run tests - npm t
-
 Used data format:
 
 - number of children: 0-2 - currently not protected
@@ -28,3 +22,9 @@ dataNode =
 value: number,
 children?: dataNode[]
 }
+
+Run instructions:
+
+- install - npm i
+- start - npm start
+- run tests - npm t
