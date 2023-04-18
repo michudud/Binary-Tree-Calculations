@@ -1,5 +1,5 @@
 const LeafCounter = ({ dataStructure }) => {
-  const calculateLeafs = (structure) => {
+  const calculateLeaves = (structure) => {
     let leafCounter = 0;
     const checkNode = (node) => {
       node.map((nodeChildren) => {
@@ -14,9 +14,14 @@ const LeafCounter = ({ dataStructure }) => {
     return leafCounter;
   };
 
-  const leafNumber = calculateLeafs(dataStructure);
+  const leafNumber = calculateLeaves(dataStructure);
 
-  return <div className="LeafCounter">{`Number of leafs: ${leafNumber}`}</div>;
+  return (
+    <div
+      className="LeafCounter"
+      data-testid="display-leaves"
+    >{`Number of leaves: ${leafNumber}`}</div>
+  );
 };
 
 export default LeafCounter;

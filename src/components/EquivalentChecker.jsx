@@ -65,7 +65,7 @@ const EquivalentChecker = ({ dataStructure }) => {
   const isEquivalent = compareInstances(dataStructure);
 
   return (
-    <div className="EquivalentChecker">
+    <div className="EquivalentChecker" data-testid="display-equivalence">
       {`Instances are equivalent: ${isEquivalent}`}
     </div>
   );

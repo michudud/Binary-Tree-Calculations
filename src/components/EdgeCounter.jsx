@@ -20,7 +20,7 @@ const EdgeCounter = ({ dataStructure }) => {
   const edgeNumber = calculateEdges(dataStructure);
 
   return (
-    <div className="EdgeCounter">
+    <div className="EdgeCounter" data-testid="display-edges">
       {`Largest number of edges: ${edgeNumber}`}
     </div>
   );
