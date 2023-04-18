@@ -88,3 +88,28 @@ test("check equivalence in symmetrical children structure with mixed children pl
   );
   expect(equivalence.innerHTML).toContain("true");
 });
+
+test("check equivalence in non symmetrical children structure with mixed children places", async () => {
+  const testStructure = [
+    {
+      value: 1,
+      children: [
+        {
+          value: 2,
+          children: [{ value: 3, children: [{ value: 5 }] }, { value: 4 }],
+        },
+        {
+          value: 2,
+          children: [{ value: 4 }, { value: 3, children: [{ value: 10 }] }],
+        },
+      ],
+    },
+  ];
+  const equivalenceChecker = render(
+    <EquivalentChecker dataStructure={testStructure} />
+  );
+  const equivalence = await equivalenceChecker.findByTestId(
+    "display-equivalence"
+  );
+  expect(equivalence.innerHTML).toContain("false");
+});
