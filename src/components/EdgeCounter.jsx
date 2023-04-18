@@ -11,7 +11,10 @@ const EdgeCounter = ({ dataStructure }) => {
       });
     };
     checkNode(structure, 0);
-    return Math.max(...edges);
+    if (edges.length > 0) {
+      return Math.max(...edges);
+    }
+    return 0;
   };
 
   const edgeNumber = calculateEdges(dataStructure);

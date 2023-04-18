@@ -34,8 +34,9 @@
 .App_Textarea {
   width: 400px;
   max-width: 1180px;
-  height: 200px;
+  height: 400px;
   margin: 10px;
+  padding: 10px;
   border-radius: 10px;
 }
 

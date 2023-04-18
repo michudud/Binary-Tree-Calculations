@@ -13,6 +13,11 @@ const App = () => {
     setCurrDataStructure(structure);
   };
 
+  const parsedStructure = JSON.stringify(currDataStructure)
+    .replace(/,/g, ",\n")
+    .replace(/\[/g, "[\n")
+    .replace(/\]/g, "]\n");
+
   return (
     <div className="App">
       <div className="App_Content">
@@ -25,7 +30,7 @@ const App = () => {
         <textarea
           className="App_Textarea"
           ref={textAreaRef}
-          defaultValue={JSON.stringify(currDataStructure)}
+          defaultValue={parsedStructure}
         ></textarea>
       </div>
     </div>
