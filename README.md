@@ -10,18 +10,18 @@ Used data format:
 
 - number of children: 0-2 - currently not protected
 
-dataStructure = [
-{
-value: number,
-children?: dataNode[]
-}
-]
+- dataStructure = [
+  {
+  value: number,
+  children?: dataNode[]
+  }
+  ]
 
-dataNode =
-{
-value: number,
-children?: dataNode[]
-}
+- dataNode =
+  {
+  value: number,
+  children?: dataNode[]
+  }
 
 Run instructions:
 
